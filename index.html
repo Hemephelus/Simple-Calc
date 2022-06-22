@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        box-shadow: -5px -5px 15px #fff, 5px 5px 15px #DBE0EF;
+      }
+    }
+  </style>
+  </head>
+
+
+
+
+
+
+  <body class="flex justify-center items-center h-screen bg-[#F7F9FA]">
+
+
+    <div id="container" class="bg-red-300 h-[70%] w-[360px] content-auto rounded-3xl bg-[#F1F3F6] flex items-center flex-col">
+<!-- hi -->
+        <div id="outputSecction">
+            <input type="text" value="0">
+        </div>
+
+            <div id="inputButton" class="grid grid-cols-4 grid-rows-5 ">
+        <div id="clear">C</div>
+        <div id="percent">%</div>
+        <div id="backspace"></div>
+        <div id="divide"></div>
+        <div id="7">7</div>
+        <div id="8">8</div>
+        <div id="9">9</div>
+        <div id="product">x</div>
+        <div id="4">4</div>
+        <div id="5">5</div>
+        <div id="6">6</div>
+        <div id="minus">-</div>
+        <div id="1">1</div>
+        <div id="2">2</div>
+        <div id="3">3</div>
+    
+        
+        <div id="plus">+</div>
+  
+        <div id="doubleZero">00</div>
+        <div id="zero">0</div>
+        <div id="comma">,</div>
+        <div id="equals">=</div>
+    </div>
+    </div>
+
+</body>
+</html>
