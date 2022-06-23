@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="https://kit.fontawesome.com/19e9a4a3c1.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -20,6 +23,7 @@
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+    
     </style>
   <style type="text/tailwindcss">
     @layer utilities {
@@ -27,10 +31,18 @@
         box-shadow: -5px -5px 15px #fff, 5px 5px 15px #DBE0EF;
       }
       .button-style{
-        @apply shadow-effect rounded-xl p-4 text-center hover:scale-105;
+        @apply shadow-effect rounded-xl p-4 text-center hover:scale-105 active:scale-100 font-semibold;
       }
       .edges-style{
         @apply text-white bg-black hover:bg-[#292929] ;
+      }
+      .output-style-section{
+        @apply shadow-effect rounded-xl px-4 pt-8 pb-2 flex flex-col font-semibold;
+        box-shadow: inset -5px -5px 15px #fff,inset 5px 5px 15px #DBE0EF;
+      }
+
+      .output-style{
+        @apply  text-right  font-semibold w-full  ;
       }
     }
   </style>
@@ -44,18 +56,24 @@
   <body class="flex justify-center items-center h-screen bg-[#F7F9FA] font-myFont">
 
 
-    <div id="container" class="bg-red-300 h-[70%] w-[360px] shadow-effect rounded-3xl bg-[#F1F3F6] flex  flex-col p-8 gap-16">
+    <div id="container" class="bg-red-300 h-[70%] w-[360px] shadow-effect rounded-3xl bg-[#F1F3F6] flex  flex-col p-8 gap-6">
 <!-- hi -->
-        <div id="outputSecction">
-            <input type="text" value="0">
-            <input type="text" value="0">
+        <div id="outputSecction" class="output-style-section">
+            <input type="text" value="25"  class="output-style"disabled>
+            <input type="text" value="12+13" class="output-style text-xl" disabled>
         </div>
 
             <div id="inputButton" class="grid grid-cols-4 grid-rows-5 gap-4">
         <button id="clear" class=" button-style edges-style">C</button>
         <button id="percent" class=" button-style edges-style">%</button>
-        <button id="backspace" class=" button-style edges-style"></button>
-        <button id="divide" class=" button-style edges-style"></button>
+        <button id="backspace" class=" button-style edges-style flex items-center justify-center">
+            <span class="material-icons">
+                backspace
+                </span>
+        </button>
+        <button id="divide" class=" button-style edges-style">
+            <i class="fa-solid fa-divide"></i>
+        </button>
         <button id="7" class=" button-style">7</button>
         <button id="8" class=" button-style">8</button>
         <button id="9" class=" button-style">9</button>
