@@ -10,15 +10,27 @@
         extend: {
           colors: {
             clifford: '#da373d',
+          },
+          fontFamily: {
+      'myFont': 'Orbitron'
           }
         }
       }
     }
   </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+    </style>
   <style type="text/tailwindcss">
     @layer utilities {
-      .content-auto {
+      .shadow-effect {
         box-shadow: -5px -5px 15px #fff, 5px 5px 15px #DBE0EF;
+      }
+      .button-style{
+        @apply shadow-effect rounded-xl p-4 text-center hover:scale-105;
+      }
+      .edges-style{
+        @apply text-white bg-black hover:bg-[#292929] ;
       }
     }
   </style>
@@ -29,39 +41,40 @@
 
 
 
-  <body class="flex justify-center items-center h-screen bg-[#F7F9FA]">
+  <body class="flex justify-center items-center h-screen bg-[#F7F9FA] font-myFont">
 
 
-    <div id="container" class="bg-red-300 h-[70%] w-[360px] content-auto rounded-3xl bg-[#F1F3F6] flex items-center flex-col">
+    <div id="container" class="bg-red-300 h-[70%] w-[360px] shadow-effect rounded-3xl bg-[#F1F3F6] flex  flex-col p-8 gap-16">
 <!-- hi -->
         <div id="outputSecction">
             <input type="text" value="0">
+            <input type="text" value="0">
         </div>
 
-            <div id="inputButton" class="grid grid-cols-4 grid-rows-5 ">
-        <div id="clear">C</div>
-        <div id="percent">%</div>
-        <div id="backspace"></div>
-        <div id="divide"></div>
-        <div id="7">7</div>
-        <div id="8">8</div>
-        <div id="9">9</div>
-        <div id="product">x</div>
-        <div id="4">4</div>
-        <div id="5">5</div>
-        <div id="6">6</div>
-        <div id="minus">-</div>
-        <div id="1">1</div>
-        <div id="2">2</div>
-        <div id="3">3</div>
+            <div id="inputButton" class="grid grid-cols-4 grid-rows-5 gap-4">
+        <button id="clear" class=" button-style edges-style">C</button>
+        <button id="percent" class=" button-style edges-style">%</button>
+        <button id="backspace" class=" button-style edges-style"></button>
+        <button id="divide" class=" button-style edges-style"></button>
+        <button id="7" class=" button-style">7</button>
+        <button id="8" class=" button-style">8</button>
+        <button id="9" class=" button-style">9</button>
+        <button id="product" class=" button-style edges-style">x</button>
+        <button id="4" class=" button-style">4</button>
+        <button id="5" class=" button-style">5</button>
+        <button id="6" class=" button-style">6</button>
+        <button id="minus" class=" button-style edges-style">-</button>
+        <button id="1" class=" button-style">1</button>
+        <button id="2" class=" button-style">2</button>
+        <button id="3" class=" button-style">3</button>
     
         
-        <div id="plus">+</div>
+        <div id="plus" class=" button-style edges-style">+</div>
   
-        <div id="doubleZero">00</div>
-        <div id="zero">0</div>
-        <div id="comma">,</div>
-        <div id="equals">=</div>
+        <div id="doubleZero" class=" button-style">00</div>
+        <div id="zero" class=" button-style">0</div>
+        <div id="comma" class=" button-style">,</div>
+        <div id="equals" class=" button-style edges-style">=</div>
     </div>
     </div>
 
