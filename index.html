@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
       <script src="https://kit.fontawesome.com/19e9a4a3c1.js" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,13 +32,13 @@
         box-shadow: -5px -5px 15px #fff, 5px 5px 15px #DBE0EF;
       }
       .button-style{
-        @apply shadow-effect rounded-xl p-4 text-center hover:scale-105 active:scale-100 font-semibold;
+        @apply shadow-effect rounded-xl p-4 text-center hover:scale-105 active:scale-100 font-semibold hover:outline hover:outline-offset-2 hover:outline-1 hover:outline-pink-400/[.55];
       }
       .edges-style{
         @apply text-white bg-black hover:bg-[#292929] ;
       }
       .output-style-section{
-        @apply shadow-effect rounded-xl px-4 pt-8 pb-2 flex flex-col font-semibold;
+        @apply shadow-effect rounded-xl px-4 pt-4 gap-2 pb-2 flex flex-col font-semibold;
         box-shadow: inset -5px -5px 15px #fff,inset 5px 5px 15px #DBE0EF;
       }
 
@@ -53,48 +54,48 @@
 
 
 
-  <body class="flex justify-center items-center h-screen bg-[#F7F9FA] font-myFont">
+  <body class="flex justify-center items-center h-screen bg-[#F7F9FA] ">
 
-
+ 
     <div id="container" class="bg-red-300 h-[70%] w-[360px] shadow-effect rounded-3xl bg-[#F1F3F6] flex  flex-col p-8 gap-6">
 <!-- hi -->
         <div id="outputSecction" class="output-style-section">
-            <input type="text" value="25"  class="output-style"disabled>
-            <input type="text" value="12+13" class="output-style text-xl" disabled>
+            <input previous-Operand type="text" value=""  class="output-style opacity-50"disabled>
+            <input  current-Operand type="text" value="" class="output-style text-2xl" disabled>
         </div>
 
-            <div id="inputButton" class="grid grid-cols-4 grid-rows-5 gap-4">
-        <button id="clear" class=" button-style edges-style">C</button>
-        <button id="percent" class=" button-style edges-style">%</button>
-        <button id="backspace" class=" button-style edges-style flex items-center justify-center">
+            <div id="inputButtons" class="grid grid-cols-4 grid-rows-5 gap-4 font-myFont">
+        <button clear class=" button-style edges-style">C</button>
+        <button data-operator class=" button-style edges-style">%</button>
+        <button backspace class=" button-style edges-style flex items-center justify-center">
             <span class="material-icons">
                 backspace
                 </span>
         </button>
-        <button id="divide" class=" button-style edges-style">
-            <i class="fa-solid fa-divide"></i>
+        <button data-operator class=" button-style edges-style">
+          ÷
         </button>
-        <button id="7" class=" button-style">7</button>
-        <button id="8" class=" button-style">8</button>
-        <button id="9" class=" button-style">9</button>
-        <button id="product" class=" button-style edges-style">x</button>
-        <button id="4" class=" button-style">4</button>
-        <button id="5" class=" button-style">5</button>
-        <button id="6" class=" button-style">6</button>
-        <button id="minus" class=" button-style edges-style">-</button>
-        <button id="1" class=" button-style">1</button>
-        <button id="2" class=" button-style">2</button>
-        <button id="3" class=" button-style">3</button>
+        <button data-number class=" button-style">7</button>
+        <button data-number class=" button-style">8</button>
+        <button data-number class=" button-style">9</button>
+        <button data-operator class=" button-style edges-style">x</button>
+        <button data-number class=" button-style">4</button>
+        <button data-number class=" button-style">5</button>
+        <button data-number class=" button-style">6</button>
+        <button data-operator class=" button-style edges-style">-</button>
+        <button data-number class=" button-style">1</button>
+        <button data-number class=" button-style">2</button>
+        <button data-number class=" button-style">3</button>
     
         
-        <div id="plus" class=" button-style edges-style">+</div>
+        <div data-operator class=" button-style edges-style">+</div>
   
-        <div id="doubleZero" class=" button-style">00</div>
-        <div id="zero" class=" button-style">0</div>
-        <div id="comma" class=" button-style">,</div>
-        <div id="equals" class=" button-style edges-style">=</div>
+        <button data-number class=" button-style">00</button>
+        <button data-number class=" button-style">0</button>
+        <button data-number class=" button-style">.</button>
+        <button equals class=" button-style edges-style">=</button>
     </div>
     </div>
-
+    <script src="./calc.js"></script>
 </body>
 </html>
