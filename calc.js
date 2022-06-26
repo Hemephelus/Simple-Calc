@@ -1,5 +1,5 @@
-const numberButtons = document.querySelectorAll('[data-number]')
 const operatorButtons = document.querySelectorAll('[data-operator]')
+const numberButtons = document.querySelectorAll('[data-number]')
 const prevOperan = document.querySelector('[previous-Operand]')
 const currentOperan = document.querySelector('[current-Operand]')
 const clear = document.querySelector('[clear]')
@@ -66,7 +66,7 @@ function calculate() {
             result = prevValue / currentValue
             break
         case '%':
-            result = prevValue/100
+            result = (prevValue/100) * currentValue
             break
             default:
                 return
