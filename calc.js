@@ -34,7 +34,7 @@ function updateCurrentDisplay(number) {
 function updateprevtDisplay(number) {
     if (currentOperan.value == '.') return
     if (prevOperan.value != '') {
-        calculate(prevOperan.value, currentOperan.value)
+        calculate()
     }
     currentOperan.value = currentOperan.value.toString() + number.toString()
     prevOperan.value = currentOperan.value
